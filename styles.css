@@ -5,8 +5,8 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  color: #001932;
-  background-color: #f0f7e6;
+  color: #d8bfb2;
+  background-color: #151515;
 }
 
 .container {
@@ -19,8 +19,8 @@ body {
 
 button {
   padding: 12px;
-  color: #fff;
-  background-color: #00d773;
+  color: #151515;
+  background-color: #c6c5b3;
   border: none;
   border-radius: 4px;
   font-size: 15px;
@@ -31,13 +31,13 @@ button {
 }
 
 button:hover {
-  color: #fff;
-  background-color: #00f181;
+  color: #151515;
+  background-color: #d4c7be;
 }
 
 button:active {
-  color: #fff;
-  background-color: #00be65;
+  color: #151515;
+  background-color: #c6c5b3;
 }
 
 .flex-row {
