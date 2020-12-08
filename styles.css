@@ -5,8 +5,8 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  color: #001932;
-  background-color: #f0f7e6;
+  color: #07A0C3;
+  background-color: #E1E2EF;
 }
 
 .container {
@@ -15,29 +15,32 @@ body {
 
 .wrapper {
   width: 400px;
+  
 }
 
 button {
   padding: 12px;
   color: #fff;
-  background-color: #00d773;
-  border: none;
-  border-radius: 4px;
+  background-color: #9067C6;
+  border: 10px;
+  border-radius: 50%;
   font-size: 15px;
   font-weight: 500;
-  min-width: 140px;
+  min-width: 100px;
+  min-height: 100px;
   user-select: none;
   outline:none;
 }
 
 button:hover {
   color: #fff;
-  background-color: #00f181;
+  background-color: #B16796;
+  border-radius: 50%;
 }
 
 button:active {
   color: #fff;
-  background-color: #00be65;
+  background-color: #9067C6;
 }
 
 .flex-row {
@@ -49,3 +52,4 @@ button:active {
   justify-content: center;
   align-items: center;
 }
+
