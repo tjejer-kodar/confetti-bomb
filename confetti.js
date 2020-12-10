@@ -8,10 +8,11 @@
 // partiklar ha samma färg men om den returnerar olika färger
 // t.ex. baserat på slump eller baserat på inparametern groupName
 // så kan det istället bli en blandning av färger.
-const chooseParticleColor = (groupName) => {
-  return 'gray'
-}
+const colors = ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"];
 
+const chooseParticleColor = (groupName) => {
+  return colors[Math.floor(Math.random() * colors.length)];
+};
 
 // Denna funktion anropas för att skjuta ut konfetti. Funktionen
 // som kommer in som parameter addConfettiParticles kan anropas en
@@ -25,21 +26,28 @@ const bang = (addConfettiParticles) => {
   // (och med vilken hastighet) de flyger, hur mycket partiklarna
   // sprider ut sig från varandra samt ett gruppnamn som skickas in i
   // chooseParticleColor. Ändra på dessa värden och se vad som händer!
-  addConfettiParticles({
-    groupName: 'lonely sad confetti',  // Valfritt namn på gruppen
-    particleAmount: 1,  // Antal konfettipartiklar
-    xPosition: 50,      // Position i procent av skärmens bredd, 0 är längst till vänster och 100 längst till höger
-    yPosition: 50,      // Position i procent av skärmens höjd, 0 är längst ner och 100 högst upp
-    xVelocity: 0,       // Hastighet i sidled, positiva värden åker åt höger och negativa åt vänster
-    yVelocity: 2,       // Hastighet i höjdled, positiva värden åker uppåt och negativa värden nedåt
-    xSpread: 80,        // Slumpmässig spridning på partikelns hastighet i sidled
-    ySpread: 20         // Slumpmässig spridning på partikelns hastighet i höjdled
-  })
-}
+  function makeConfetti(delay, amount, spread, y) {
+    setTimeout(function () {
+      addConfettiParticles({
+        groupName: "lonely sad confetti", // Valfritt namn på gruppen
+        particleAmount: amount, // Antal konfettipartiklar
+        xPosition: 50, // Position i procent av skärmens bredd, 0 är längst till vänster och 100 längst till höger
+        yPosition: 60, // Position i procent av skärmens höjd, 0 är längst ner och 100 högst upp
+        xVelocity: 0, // Hastighet i sidled, positiva värden åker åt höger och negativa åt vänster
+        yVelocity: 2, // Hastighet i höjdled, positiva värden åker uppåt och negativa värden nedåt
+        xSpread: spread, // Slumpmässig spridning på partikelns hastighet i sidled
+        ySpread: y, // Slumpmässig spridning på partikelns hastighet i höjdled
+      });
+    }, delay);
+  }
+  makeConfetti(0, 60, 90, 20);
+  makeConfetti(1000, 40, 90, 20);
+  makeConfetti(2000, 10, 90, 20);
+  makeConfetti(4000, 1000, 190, 30);
+  makeConfetti(4500, 500, 150, 30);
+  makeConfetti(5000, 100, 99, 20);
+};
 
 // Här exporterar vi funktionerna så att de kan användas i
 // confetti-creator-filen som du inte behöver bry dig om
-export {
-  chooseParticleColor,
-  bang
-}
+export { chooseParticleColor, bang };
