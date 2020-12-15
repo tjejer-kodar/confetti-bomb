@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
-html,
-body {
+html, body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   color: #001932;
-  background-color: #f0f7e6;
+  background-color: #b9e6e0;
 }
 
 .container {
@@ -20,14 +18,14 @@ body {
 button {
   padding: 12px;
   color: #fff;
-  background-color: #00d773;
+  background-color: #f66b6b;
   border: none;
   border-radius: 4px;
   font-size: 15px;
   font-weight: 500;
   min-width: 140px;
   user-select: none;
-  outline:none;
+  outline: none;
 }
 
 button:hover {
