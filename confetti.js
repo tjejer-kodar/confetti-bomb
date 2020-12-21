@@ -9,8 +9,17 @@
 // t.ex. baserat på slump eller baserat på inparametern groupName
 // så kan det istället bli en blandning av färger.
 const chooseParticleColor = (groupName) => {
-  return 'gray'
+  
+  let slump = getRandomInt(7);
+  const myColors = ['blue','yellow','purple','red', '#fc0356', '#7703fc', '#03f8fc'];
+  return myColors[slump];
+  
 }
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 
 
 // Denna funktion anropas för att skjuta ut konfetti. Funktionen
@@ -26,8 +35,8 @@ const bang = (addConfettiParticles) => {
   // sprider ut sig från varandra samt ett gruppnamn som skickas in i
   // chooseParticleColor. Ändra på dessa värden och se vad som händer!
   addConfettiParticles({
-    groupName: 'lonely sad confetti',  // Valfritt namn på gruppen
-    particleAmount: 1,  // Antal konfettipartiklar
+    groupName: 'random confetti rain',  // Valfritt namn på gruppen
+    particleAmount: getRandomInt(400),  // Antal konfettipartiklar
     xPosition: 50,      // Position i procent av skärmens bredd, 0 är längst till vänster och 100 längst till höger
     yPosition: 50,      // Position i procent av skärmens höjd, 0 är längst ner och 100 högst upp
     xVelocity: 0,       // Hastighet i sidled, positiva värden åker åt höger och negativa åt vänster
