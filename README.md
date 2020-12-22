@@ -5,4 +5,4 @@ Månadens utmaning av @tjejer-kodar är att skapa ett konfettiregn. Här är mit
 --> [TjejerKodar](https://www.tjejerkodar.se/kodutmaningen/) 
 
 
---> [Mitt bidrag](https://msmalinosterberg.github.io/confetti/) 
+--> [Mitt bidrag](https://msmalinosterberg.github.io/skapa-ett-konfetti-regn/) 
