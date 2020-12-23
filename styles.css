@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   color: #001932;
-  background-color: #f0f7e6;
+  background-color: #f3b2e8;
 }
 
 .container {
@@ -18,26 +18,28 @@ body {
 }
 
 button {
-  padding: 12px;
+  padding: 20px;
   color: #fff;
-  background-color: #00d773;
+  background-color: hotpink;
   border: none;
   border-radius: 4px;
   font-size: 15px;
   font-weight: 500;
-  min-width: 140px;
   user-select: none;
   outline:none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button:hover {
   color: #fff;
-  background-color: #00f181;
+  background-color: #f100bd;
 }
 
 button:active {
   color: #fff;
-  background-color: #00be65;
+  background-color: #f100bd;
 }
 
 .flex-row {
@@ -48,4 +50,28 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img {
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+h1 {
+  font-size: 6rem;
+  color: purple;
+  padding: 0;
+  margin: 0;
+}
+
+.happy {
+  color: #f100bd; 
+  padding: 0; 
+}
+
+h2 {
+  color: rgb(219, 127, 219);
 }
