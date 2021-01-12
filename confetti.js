@@ -1,8 +1,13 @@
 // Hur ändra färger baserat på inparametern groupName?
+const tealishColors = ['#00b9ae', '#037171', '#02c3bd', '#009f93']
+const blueishColors = ['#44cfcb', '#4ea5d9', '#2a4494', '#224870']
+const pinkishColors = ['#A8DCD9', '#E2A3C7', '#D67AB1', '#60435F']
+
+const colors = { tealishColors, blueishColors, pinkishColors, default: tealishColors }
 
 const chooseParticleColor = (groupName) => {
-  const colors = ['#00b9ae', '#037171', '#02c3bd', '#009f93']
-  return colors[Math.floor(Math.random(groupName) * colors.length)]
+  const colorSet = colors[groupName] || colors.default
+  return colorSet[Math.floor(Math.random(groupName) * colorSet.length)]
 }
 
 
@@ -12,7 +17,7 @@ const bang = (addConfettiParticles) => {
   // chooseParticleColor?
   setTimeout(function () {
     addConfettiParticles({
-      groupName: 'color sync confetti',
+      groupName: 'tealishColors',
       particleAmount: 300,
       xPosition: 50,      // Position i procent av skärmens bredd, 0 är längst till vänster och 100 längst till höger
       yPosition: 50,      // Position i procent av skärmens höjd, 0 är längst ner och 100 högst upp
@@ -25,7 +30,7 @@ const bang = (addConfettiParticles) => {
 
   setTimeout(function () {
     addConfettiParticles({
-      groupName: 'color sync confetti',
+      groupName: 'blueishColors',
       particleAmount: 400,
       xPosition: 25,
       yPosition: 50,
@@ -38,7 +43,7 @@ const bang = (addConfettiParticles) => {
 
   setTimeout(function () {
     addConfettiParticles({
-      groupName: 'color sync confetti',
+      groupName: 'pinkishColors',
       particleAmount: 500,
       xPosition: 75,
       yPosition: 50,
